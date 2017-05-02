@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import
+            alias="StringUtils"
+            type="com.think360.schoolshare.utils.MyStringUtils" />
+
+        <variable
+            name="data"
+            type="com.think360.schoolshare.fragment.members.Members" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/five_dp"
+        android:layout_marginTop="@dimen/five_dp"
+        android:elevation="@dimen/three_dp"
+        android:orientation="horizontal">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:elevation="3dp"
+
+            android:padding="@dimen/three_dp"
+            android:src="@mipmap/user"
+            app:civ_border_color="#BEBEBE"
+            app:civ_border_width="1dp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                android:id="@+id/memberName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/three_dp"
+                android:hint="Surinder Singh"
+                android:padding="@dimen/two_dp"
+                android:text='@{data.firstName+" "+data.lastName}'
+                android:textSize="14sp" />
+
+            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                android:id="@+id/memberBatch"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/three_dp"
+                android:hint="Surinder Singh"
+                android:padding="@dimen/two_dp"
+                android:text='@{data.chapterId+"  ("+data.batchOf+")"}'
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/five_dp"
+            android:gravity="right">
+
+
+            <ImageView
+                android:layout_width="@dimen/thirty_dp"
+                android:layout_height="@dimen/thirty_dp"
+                android:padding="@dimen/five_dp"
+                android:src="@drawable/ic_time" />
+
+            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                android:id="@+id/howLongRegistred"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:hint="time "
+                android:text="@{StringUtils.dateFormatConvert(data.created)}"
+
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</layout>

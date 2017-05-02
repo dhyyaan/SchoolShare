@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/five_dp"
+    android:layout_marginRight="@dimen/five_dp"
+    android:background="#EBEBEB">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView2" >
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty_dp"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageViewStep1"
+                    android:src="@mipmap/step_4_2"
+                    android:padding="@dimen/five_dp"
+                    android:layout_gravity="left"/>
+
+                <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_professional_info"
+                    android:id="@+id/tvTitle"
+                    android:textColor="@color/color1"
+                    android:textSize="@dimen/twenty_sp"
+                    android:padding="@dimen/ten_dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="left|center"/>
+
+            </LinearLayout>
+            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lvl_organization_name"
+                android:layout_marginTop="@dimen/five_dp"
+                android:layout_marginLeft="@dimen/five_dp"
+
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/fifteen_sp"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/etOrganizationName"
+                android:gravity="left"
+                android:layout_marginTop="@dimen/five_dp"
+                android:layout_marginLeft="@dimen/five_dp"
+                android:layout_marginRight="@dimen/five_dp"
+                android:textSize="@dimen/fifteen_sp"
+
+                android:textColor="@android:color/black"
+                />
+            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lvl_industry"
+                android:layout_marginTop="@dimen/five_dp"
+                android:layout_marginLeft="@dimen/five_dp"
+
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/fifteen_sp"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerIndustry"
+                android:layout_marginTop="@dimen/five_dp"
+                android:layout_marginLeft="@dimen/five_dp"
+                android:layout_marginRight="@dimen/five_dp"/>
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="1.2dp"
+                android:background="@android:color/black"
+                android:layout_centerVertical="true"
+
+
+                android:layout_marginLeft="@dimen/five_dp"
+                android:layout_marginRight="@dimen/five_dp"/>
+      <!--      <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lvl_sector"
+                android:id="@+id/tvLvlSector"
+                android:layout_marginTop="@dimen/five_dp"
+                android:layout_marginLeft="@dimen/five_dp"
+
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/fifteen_sp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/etSector"
+                android:gravity="left"
+                android:layout_marginTop="@dimen/five_dp"
+                android:layout_marginLeft="@dimen/five_dp"
+                android:layout_marginRight="@dimen/five_dp"
+                android:textSize="@dimen/fifteen_sp"
+                android:textColor="@android:color/black"
+                />-->
+            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lvl_designation"
+                android:layout_marginTop="@dimen/five_dp"
+                android:layout_marginLeft="@dimen/five_dp"
+
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/fifteen_sp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/etDesignation"
+                android:gravity="left"
+                android:layout_marginTop="@dimen/five_dp"
+                android:layout_marginLeft="@dimen/five_dp"
+                android:layout_marginRight="@dimen/five_dp"
+                android:textSize="@dimen/fifteen_sp"
+                android:textColor="@android:color/black" />
+
+
+
+            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lvl_linkedin_profile_link"
+                android:layout_marginTop="@dimen/five_dp"
+                android:layout_marginLeft="@dimen/five_dp"
+
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/fifteen_sp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/etLinkdinProfileLink"
+                android:gravity="left"
+                android:layout_marginTop="@dimen/five_dp"
+                android:layout_marginLeft="@dimen/five_dp"
+                android:layout_marginRight="@dimen/five_dp"
+                android:textSize="@dimen/fifteen_sp"
+                android:textColor="@android:color/black"/>
+
+
+            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lvl_additional_info"
+                android:id="@+id/tvLvlAdditionalInfo"
+                android:layout_marginTop="@dimen/five_dp"
+                android:layout_marginLeft="@dimen/five_dp"
+
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/fifteen_sp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+
+                android:ems="10"
+                android:id="@+id/etadditionalInfo"
+                android:layout_marginTop="@dimen/five_dp"
+                android:layout_marginLeft="@dimen/five_dp"
+                android:layout_marginRight="@dimen/five_dp"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/twenty_sp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ten_dp"
+
+
+                    app:mrl_rippleAlpha="0.1"
+                    app:mrl_rippleDelayClick="true"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btnUploadFile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:drawableLeft="@mipmap/arrow"
+                        android:elevation="5dp"
+                        android:singleLine="true"
+                        android:text="@string/button_upload_file"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/fifteen_sp"
+                        android:textColor="@android:color/black" />
+                </com.balysv.materialripple.MaterialRippleLayout>
+                <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_pdf_docs"
+                    android:layout_marginTop="@dimen/five_dp"
+
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/fifteen_sp"/>
+            </LinearLayout>
+
+
+
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/five_dp"
+
+                app:mrl_rippleAlpha="0.1"
+                app:mrl_rippleDelayClick="true"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true">
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btnFinish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color1"
+
+                    android:elevation="5dp"
+                    android:singleLine="true"
+                    android:text="@string/finish"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/twenty_sp"
+                    android:textColor="@android:color/white" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right" />
+</LinearLayout>

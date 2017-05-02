@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:layout_marginLeft="@dimen/five_dp"
+    android:layout_marginRight="@dimen/five_dp"
+    android:background="#EBEBEB">
+  <!--  tools:context=".activity.SignUpActivity"-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty_dp"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/ten_dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewStep1"
+            android:src="@mipmap/register"
+           />
+
+        <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_register_process"
+            android:id="@+id/tvTitle"
+            android:textColor="@color/color1"
+            android:textSize="@dimen/twenty_sp"
+            android:padding="@dimen/ten_dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:gravity="center">
+    <com.facebook.login.widget.LoginButton
+        xmlns:fb="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:layout_marginLeft="@dimen/ten_dp"
+        android:layout_marginRight="@dimen/ten_dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:gravity="center"
+        fb:com_facebook_login_text="@string/fb_login"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/thirty_dp">
+
+
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:layout_marginLeft="@dimen/five_dp"
+            android:layout_marginRight="@dimen/five_dp"/>
+        <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/or"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:layout_centerHorizontal="true" />
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_centerVertical="true"
+            android:layout_weight="0.5"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/five_dp"
+            android:layout_marginRight="@dimen/five_dp"/>
+    </LinearLayout>
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/thirty_dp"
+        android:layout_marginLeft="@dimen/ten_dp"
+        android:layout_marginRight="@dimen/ten_dp"
+        app:mrl_rippleAlpha="0.1"
+        app:mrl_rippleDelayClick="true"
+        app:mrl_rippleHover="true"
+        app:mrl_rippleOverlay="true">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnResManually"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color1"
+            android:elevation="@dimen/five_dp"
+            android:singleLine="true"
+            android:text="@string/add_data_manually"
+            android:textAllCaps="false"
+            android:textSize="@dimen/fifteen_sp"
+            android:textColor="@android:color/white"
+            android:drawableTint="@android:color/white"/>
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    </LinearLayout>
+</LinearLayout>

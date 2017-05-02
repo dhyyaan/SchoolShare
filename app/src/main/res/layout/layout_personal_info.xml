@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <data>
+        <variable
+            name="profile"
+            type="com.think360.schoolshare.model.ProfileModel" />
+    </data>
+
+    <FrameLayout
+
+        android:id="@+id/fragContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="495dp"
+            android:background="#EBEBEB"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:minHeight="?attr/actionBarSize">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/badge">
+
+                    <FrameLayout
+
+                        android:id="@+id/back"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentLeft="true"
+                        android:background="?attr/actionBarItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:minHeight="48dp"
+                        android:minWidth="48dp">
+
+                        <ImageView
+                            android:id="@+id/menu_back"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:src="@mipmap/back"
+                            android:tint="@android:color/white" />
+
+                    </FrameLayout>
+
+                    <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/two_dp"
+                        android:text="Personal Information"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+
+                <FrameLayout
+
+                    android:id="@+id/edit"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="true"
+                    android:background="?attr/actionBarItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="48dp"
+                    android:minWidth="48dp">
+
+                    <ImageView
+                        android:id="@+id/menu_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:scaleType="center"
+                        android:src="@mipmap/pencil"
+                        android:tint="@android:color/white" />
+
+                </FrameLayout>
+            </RelativeLayout>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/relativeLayout3">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/two_hundred_dp"
+                        android:layout_below="@+id/toolbar_top"
+                        android:layout_centerHorizontal="true"
+                        android:elevation="3dp"
+                        android:padding="1dp"
+                        android:scaleType="centerCrop"
+                        app:image_url="@{profile.image_url}"
+                         />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/five_dp"
+                        android:paddingLeft="@dimen/twenty_dp"
+                        android:paddingRight="@dimen/twenty_dp">
+
+
+                        <LinearLayout
+
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/twenty_dp"
+
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_margin="@dimen/two_dp"
+                                    android:src="@drawable/user" />
+
+                                <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_RequiredKills"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_toLeftOf="@+id/iv_eyeDetail"
+                                    android:text="First Name"
+                                    android:textColor="@color/black"
+                                    android:id="@+id/centuryGothicRegular2" />
+
+                            </LinearLayout>
+
+                            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                                android:id="@+id/firstNametDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_RequiredKills"
+                                android:layout_gravity="center_vertical"
+                                android:layout_toLeftOf="@+id/iv_eyeDetail"
+                                android:layout_weight="1"
+                                android:text="@{profile.first_name}"
+                                android:textColor="@color/gray" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_margin="@dimen/two_dp"
+                                    android:src="@drawable/user" />
+
+                                <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="Midle Name"
+                                    android:textColor="@color/black" />
+
+                            </LinearLayout>
+
+                            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                                android:id="@+id/middleName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_gravity="center_vertical"
+
+                                android:layout_weight="1"
+                                android:text="@{profile.middle_name}"
+                                android:textColor="@color/gray" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_margin="@dimen/two_dp"
+                                    android:src="@drawable/user" />
+
+                                <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="Last Name"
+                                    android:textColor="@color/black" />
+
+                            </LinearLayout>
+
+                            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                                android:id="@+id/lastName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="@{profile.last_name}"
+                                android:textColor="@color/gray" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_margin="@dimen/two_dp"
+                                    android:src="@drawable/user" />
+
+                                <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="Nick Name"
+                                    android:textColor="@color/black" />
+
+                            </LinearLayout>
+
+                            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                                android:id="@+id/nickName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="@{profile.nick_name}"
+                                android:textColor="@color/gray" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_county"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_margin="@dimen/two_dp"
+                                    android:src="@drawable/mode_of_delivery" />
+
+                                <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="Gender" />
+
+                            </LinearLayout>
+
+                            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                                android:id="@+id/tv_country"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="London"
+                                android:textColor="@color/gray" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_margin="@dimen/two_dp"
+                                    android:src="@drawable/gender" />
+
+                                <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="Gender"
+                                    android:textColor="@color/black" />
+
+                            </LinearLayout>
+
+                            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                                android:id="@+id/gender"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="@{profile.gender}"
+                                android:textColor="@color/gray" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_margin="@dimen/two_dp"
+                                    android:src="@drawable/marital" />
+
+                                <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="Marital Status"
+                                    android:textColor="@color/black" />
+
+                            </LinearLayout>
+
+                            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                                android:id="@+id/materialStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="@{profile.marital_status}"
+                                android:textColor="@color/gray" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_margin="@dimen/two_dp"
+                                    android:src="@drawable/graduction_cap" />
+
+                                <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="Date OF Birth"
+                                    android:textColor="@color/black" />
+
+                            </LinearLayout>
+
+                            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                                android:id="@+id/dob"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="@{profile.date_of_birth}"
+                                android:textColor="@color/gray" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_margin="@dimen/two_dp"
+                                    android:src="@drawable/facebook" />
+
+                                <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="Facebook"
+                                    android:textColor="@color/black" />
+
+                            </LinearLayout>
+
+                            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                                android:id="@+id/tv_facebook"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+
+                                android:layout_weight="1"
+                                android:text="face.com/surinderbindra"
+                                android:textColor="@color/gray" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_margin="@dimen/two_dp"
+                                    android:src="@drawable/extra_info" />
+
+                                <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="start"
+                                    android:text="Additional Info"
+                                    android:textColor="@color/black" />
+
+                            </LinearLayout>
+
+                            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                                android:id="@+id/tv_AddInfo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="@{profile.additional_information}"
+                                android:textColor="@color/gray" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+    </FrameLayout>
+</layout>

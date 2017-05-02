@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="profile"
+            type="com.think360.schoolshare.model.ProfileModel" />
+
+        <variable
+            name="handlers"
+            type="com.think360.schoolshare.handlers.MyHandlers" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/fragContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <RelativeLayout
+
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/edit"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/colorPrimary"
+                android:clickable="true"
+                android:focusable="true"
+                android:minHeight="48dp"
+                android:minWidth="48dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:gravity="center_vertical"
+                    android:minHeight="?attr/actionBarSize">
+
+
+                    <FrameLayout
+
+                        android:id="@+id/back"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentLeft="true"
+                        android:background="?attr/actionBarItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:minHeight="48dp"
+                        android:minWidth="48dp"
+                        android:onClick="@{handlers::onClickBack}">
+
+                        <ImageView
+                            android:id="@+id/menu_back"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/back"
+                            android:tint="@android:color/white" />
+
+                    </FrameLayout>
+
+                    <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/two_dp"
+                        android:text="Personal Information"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="55dp"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:id="@+id/scrollView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:layout_marginRight="@dimen/five_dp"
+                        android:background="#EBEBEB"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/ten_dp">
+
+                        <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                            android:id="@+id/tvTitleUseProfileAs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/five_dp"
+                            android:text="@string/lvl_as_profile_as"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/fifteen_sp"
+                             />
+
+                        <Spinner
+                            android:id="@+id/spinnerUseProfileAs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginRight="@dimen/five_dp"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:entries="@array/profile"
+                           android:onItemSelected="@{handlers :: onItemSelectedProfile }" />
+
+                        <View
+                            android:id="@+id/line1"
+                            android:layout_width="match_parent"
+                            android:layout_height="1.2dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginRight="@dimen/five_dp"
+                            android:layout_toEndOf="@+id/imageViewStep2"
+
+                            android:layout_toRightOf="@+id/imageViewStep2"
+                            android:background="@color/colorPrimary" />
+
+                        <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                            android:id="@+id/tvLvlFirstName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:text="@string/lvl_fname"
+
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/fifteen_sp" />
+
+                        <EditText
+                            android:id="@+id/etFirstName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginRight="@dimen/five_dp"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:ems="10"
+                            android:gravity="left"
+                            android:inputType="textPersonName"
+                            android:text="@{profile.first_name}"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/fifteen_sp" />
+
+                        <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                            android:id="@+id/tvLvlMiddleName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:text="@string/lvl_mname"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/fifteen_sp" />
+
+
+                        <EditText
+                            android:id="@+id/etMiddleName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginRight="@dimen/five_dp"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:ems="10"
+                            android:gravity="left"
+                            android:inputType="textPersonName"
+                            android:text="@{profile.middle_name}"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/fifteen_sp" />
+
+                        <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                            android:id="@+id/tvLvlLastName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:text="@string/lvl_lname"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/fifteen_sp" />
+
+                        <EditText
+                            android:id="@+id/etLastName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginRight="@dimen/five_dp"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:ems="10"
+                            android:gravity="left"
+                            android:text="@{profile.last_name}"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/fifteen_sp" />
+
+                        <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                            android:id="@+id/tvLvlNickName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:text="@string/lvl_nname"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/fifteen_sp" />
+
+
+                        <EditText
+                            android:id="@+id/etNickName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginRight="@dimen/five_dp"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:ems="10"
+                            android:gravity="left"
+                            android:inputType="textPersonName"
+                            android:text="@{profile.nick_name}"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/fifteen_sp" />
+
+
+                        <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                            android:id="@+id/tvLvlGenderName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:text="@string/lvl_gender"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/fifteen_sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupGender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:onCheckedChanged="@{handlers::onCheckedGenderChanged}">
+
+
+                            <RadioButton
+                                android:id="@+id/radioButtonMale"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="@string/text_male"
+                                android:textColor="@android:color/black" />
+
+
+                            <RadioButton
+                                android:id="@+id/radioButtonFemale"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/one_hundred_ninty_dp_rb"
+
+                                android:text="@string/text_female"
+                                android:textColor="@android:color/black" />
+
+                        </RadioGroup>
+
+
+                        <TextView
+                            android:id="@+id/tvLvlRoleInSch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:text="@string/lvl_role_in_sch"
+
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/fifteen_sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioButtoRoleInSchool"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:onCheckedChanged="@{handlers::onCheckedRoleInSchChanged}" >
+
+                            <RadioButton
+                                android:id="@+id/radioButtonStu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:text="@string/text_student"
+                                android:textColor="@android:color/black" />
+
+                            <RadioButton
+                                android:id="@+id/radioButtonStaff"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/one_hundred_seventy_five_rb"
+                                android:text="@string/text_Staff"
+                                android:textColor="@android:color/black" />
+
+                        </RadioGroup>
+
+
+                        <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                            android:id="@+id/tvLvlMaterialStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:text="@string/lvl_material_status"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/fifteen_sp" />
+
+                        <Spinner
+                            android:id="@+id/spinnerMaterialStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginRight="@dimen/five_dp"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:layout_weight="1"
+                            android:entries="@array/material_status"
+                            android:onItemSelected="@{handlers :: onItemSelectedMaterialStatus }"/>
+
+                        <View
+                            android:id="@+id/line2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1.2dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginRight="@dimen/five_dp"
+                            android:layout_toEndOf="@+id/imageViewStep2"
+
+                            android:layout_toRightOf="@+id/imageViewStep2"
+                            android:background="@color/colorPrimary" />
+
+                        <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                            android:id="@+id/tvLvlDob"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:text="@string/lvl_dob"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/fifteen_sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/five_dp"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/etDob"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/five_dp"
+                                android:layout_marginTop="@dimen/five_dp"
+                                android:layout_weight="1"
+                                android:ems="10"
+                                android:inputType="date"
+                                android:text="@{profile.date_of_birth}"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/fifteen_sp" />
+
+                            <ImageView
+                                android:id="@+id/ivCalender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/five_dp"
+                                android:onClick="@{handlers::onClickDateSet}"
+                                android:src="@mipmap/calender" />
+                        </LinearLayout>
+
+
+                        <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                            android:id="@+id/tvLvlAdditionalInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:text="@string/lvl_additional_info"
+                            android:textColor="@android:color/black"
+
+                            android:textSize="@dimen/fifteen_sp" />
+
+                        <EditText
+                            android:id="@+id/etadditionalInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginRight="@dimen/five_dp"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:ems="10"
+                            android:inputType="textMultiLine"
+                            android:text="@{profile.additional_information}"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/fifteen_sp" />
+
+
+                        <com.think360.schoolshare.utils.CircleImageView
+                            android:id="@+id/imageUploaded"
+                            android:layout_width="@dimen/one_hundred_eighty_dp"
+                            android:layout_height="@dimen/one_hundred_dp"
+                            android:layout_gravity="center_horizontal"
+
+                            app:image_url="@{profile.image_url}" />
+
+                        <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                            android:id="@+id/tvLvlUploadPic"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/lvl_upload_image"
+                            android:textColor="@android:color/black"
+
+                            android:textSize="@dimen/fifteen_sp" />
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/ten_dp"
+                            app:mrl_rippleAlpha="0.1"
+                            app:mrl_rippleDelayClick="true"
+                            app:mrl_rippleHover="true"
+                            app:mrl_rippleOverlay="true">
+
+                            <android.support.v7.widget.AppCompatButton
+                                android:id="@+id/btnNext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/color1"
+                                android:drawableTint="@android:color/white"
+                                android:elevation="@dimen/five_dp"
+                                android:singleLine="true"
+                                android:text="@string/submit"
+                                android:textAllCaps="false"
+                                android:textColor="@android:color/white"
+                                android:onClick=  "@{handlers::onClickSubmit}"
+                                android:textSize="@dimen/twenty_sp" />
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</layout>

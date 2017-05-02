@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragContainer"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.Toolbar
+
+            android:id="@+id/toolbar_top"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/badge">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/chapter_image"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+
+                        android:layout_centerVertical="true"
+                        android:elevation="3dp"
+                        android:padding="1dp"
+                        android:src="@drawable/com_facebook_button_icon"
+                        app:civ_border_color="#BEBEBE"
+                        app:civ_border_width="1dp" />
+
+                    <com.think360.schoolshare.surinder.utils.font.CenturyGothicBold
+                        android:id="@+id/memberName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toRightOf="@+id/chapter_image"
+                        android:gravity="center_horizontal"
+                        android:padding="@dimen/two_dp"
+                        android:text="@string/example"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+
+                <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/badge"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="?attr/actionBarItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="48dp"
+                    android:minWidth="48dp">
+
+                    <ImageView
+
+                        android:id="@+id/menu_badge_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_notifications_none_white_24dp"
+                        android:tint="@android:color/white" />
+
+                    <com.think360.schoolshare.surinder.badgetextview.MaterialBadgeTextView
+                        android:id="@+id/menu_badge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|end"
+                        android:ellipsize="none"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="10"
+                        android:textColor="@android:color/white"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        app:mbtv_backgroundColor="@color/appPeach" />
+                </FrameLayout>
+
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+
+        <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fourty_dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="All Chapters"
+            android:textSize="12sp" />
+
+        <View
+            android:background="@color/appGrey"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0sp"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+    </LinearLayout>
+</FrameLayout>

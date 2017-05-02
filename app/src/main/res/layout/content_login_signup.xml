@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activity.LoginSignUpActivity"
+    tools:showIn="@layout/activity_login_signup"
+    android:background="@mipmap/login_bg"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/fourty_dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_alumni"
+                android:textSize="@dimen/fourty_dp"
+
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="@dimen/ten_dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="@dimen/fifty_dp"
+                android:textColor="@android:color/white" />
+            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_share"
+                android:textSize="@dimen/fourty_dp"
+                android:textColor="@android:color/white"
+                android:background="@android:color/holo_red_light"
+                android:paddingLeft="@dimen/five_dp"
+                android:paddingRight="@dimen/five_dp"/>
+        </LinearLayout>
+        <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_ccc"
+            android:textSize="@dimen/ten_sp"
+            android:gravity="center"
+            android:textColor="@android:color/black"/>
+
+    </LinearLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ten_dp"
+        android:layout_marginRight="@dimen/ten_dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:theme="@style/MyEditTextTheme"
+        android:textColorHint="@android:color/white">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:theme="@style/MyEditTextTheme"
+        android:hint="@string/text_hint_email" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_layout_email"
+        android:layout_centerHorizontal="true"
+        android:theme="@style/MyEditTextTheme"
+        android:textColorHint="@android:color/white">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:theme="@style/MyEditTextTheme"
+        android:hint="@string/text_hint_password"
+        android:layout_marginLeft="@dimen/ten_dp"
+        android:layout_marginRight="@dimen/ten_dp"
+        />
+    </android.support.design.widget.TextInputLayout>
+
+    <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_remember_password"
+        android:id="@+id/textViewRememberPwd"
+        android:layout_below="@+id/input_layout_password"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:layout_marginRight="@dimen/ten_dp"
+        android:textColor="@android:color/white"/>
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/rippleLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mrl_rippleAlpha="0.1"
+        app:mrl_rippleDelayClick="true"
+        app:mrl_rippleHover="true"
+        app:mrl_rippleOverlay="true"
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:layout_below="@+id/textViewRememberPwd"
+        android:layout_alignLeft="@+id/input_layout_email"
+        android:layout_alignStart="@+id/input_layout_email"
+        android:layout_alignRight="@+id/textViewRememberPwd"
+        android:layout_alignEnd="@+id/textViewRememberPwd">
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_login_background"
+            android:elevation="@dimen/five_dp"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:text="@string/text_login_caps"
+            android:textAllCaps="false"
+            android:textSize="@dimen/twenty_sp"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/textViewRememberPwd"
+            android:layout_alignLeft="@+id/input_layout_email"
+            android:layout_alignStart="@+id/input_layout_email" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mrl_rippleAlpha="0.1"
+        app:mrl_rippleDelayClick="true"
+        app:mrl_rippleHover="true"
+        app:mrl_rippleOverlay="true"
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:layout_below="@+id/rippleLogin"
+        android:layout_alignLeft="@+id/input_layout_email"
+        android:layout_alignStart="@+id/input_layout_email"
+        android:layout_alignRight="@+id/textViewRememberPwd"
+        android:layout_alignEnd="@+id/textViewRememberPwd">
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_signup_background"
+            android:elevation="@dimen/five_dp"
+            android:textStyle="bold"
+            android:text="@string/text_signup_caps"
+            android:textAllCaps="false"
+            android:textSize="@dimen/twenty_sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@+id/textViewRememberPwd"
+            android:layout_alignLeft="@+id/input_layout_email"
+            android:layout_alignStart="@+id/input_layout_email" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+
+</RelativeLayout>

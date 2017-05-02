@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flnewsevents"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:background="?attr/actionBarItemBackground"
+    android:clickable="false"
+    android:focusable="false">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+
+        <ImageView
+
+            android:id="@+id/circularName"
+            android:layout_width="130dp"
+            android:layout_height="105dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/five_dp"
+            android:background="#cbcbcb"
+            android:padding="@dimen/ten_dp" />
+
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/circularName"
+            android:background="@color/appBackground" />
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/circularName"
+            android:orientation="vertical">
+
+            <com.think360.schoolshare.surinder.utils.font.CenturyGothicBold
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Title Goes Here"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="By Admin | News"
+                android:textSize="11sp" />
+
+            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ellipsize="marquee"
+                android:maxLines="2"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="@string/dummyLarge"
+                android:textSize="12sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_thumb_up_black_18dp" />
+
+                <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text=" Like " />
+
+                <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text=" | " />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_comment_black_18dp" />
+
+                <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text=" Comments " />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>
+

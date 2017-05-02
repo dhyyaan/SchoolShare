@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty_dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/colorPrimaryDark"
+        android:minWidth="800dp"
+        android:minHeight="800dp">
+        <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/title_select_ch"
+            android:id="@+id/tvTitle"
+            android:gravity="left|center"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/twenty_sp"
+           android:layout_marginLeft="@dimen/ten_dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/ivDailogCancel"
+            android:gravity="right"
+
+            android:src="@mipmap/cancel" />
+    </LinearLayout>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerSelectChapter"
+        android:layout_gravity="center_horizontal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

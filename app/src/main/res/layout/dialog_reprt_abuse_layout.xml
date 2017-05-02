@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/five_dp"
+        android:text="@string/reportAbuse"
+        android:textColor="@color/white"
+        android:textSize="@dimen/twenty_sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top"
+        android:layout_margin="@dimen/five_dp"
+        android:background="@drawable/grey_border"
+        android:gravity="left|top"
+        android:maxLines="7"
+        android:minLines="7"
+        android:id="@+id/editTextReportAbuse" />
+
+    <TextView
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/five_dp"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/twenty_sp"/>
+
+</LinearLayout>

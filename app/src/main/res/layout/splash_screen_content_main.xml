@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:pv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activity.SplashScreenMainActivity"
+    tools:showIn="@layout/splash_screen_activity_main"
+    android:background="@mipmap/login_bg" >
+
+
+
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:padding="@dimen/fourty_dp">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+      <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/text_alumni"
+          android:textSize="@dimen/fourty_dp"
+
+          android:textColor="@android:color/white"
+          android:layout_marginLeft="@dimen/ten_dp"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text=" "
+          android:textSize="@dimen/fifty_dp"
+          android:textColor="@android:color/white" />
+
+      <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/text_share"
+          android:textSize="@dimen/fourty_dp"
+          android:textColor="@android:color/white"
+          android:background="@android:color/holo_red_light"
+          android:paddingLeft="@dimen/five_dp"
+          android:paddingRight="@dimen/five_dp"/>
+    </LinearLayout>
+    <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_ccc"
+        android:textSize="@dimen/ten_sp"
+        android:gravity="center"
+
+        android:textColor="@android:color/black"/>
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:max="3000"
+        android:theme="@style/MySeekBarTheme"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:thumbTint="@color/transparent"/>
+  </LinearLayout>
+
+</LinearLayout>

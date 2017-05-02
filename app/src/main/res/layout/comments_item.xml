@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/five_dp">
+
+    <TextView
+       android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/iD" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:srcCompat="@drawable/com_facebook_profile_picture_blank_portrait"
+            android:id="@+id/thumbnail"
+            android:padding="@dimen/five_dp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/five_dp"
+            android:paddingRight="@dimen/five_dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.think360.schoolshare.surinder.utils.font.CenturyGothicBold
+                    android:text="Samual Singh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/commenter_name"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/eighteen_sp"
+
+                    android:gravity="left"/>
+
+                <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                    android:text="18 days ago"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/time"
+                    android:gravity="left"
+                    android:textColor="@android:color/darker_gray"
+                   android:layout_marginLeft="@dimen/fifteen_dp"/>
+            </LinearLayout>
+            <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+                android:text="Print Friendly Version of this pagePrint Get a PDF version of this webpagePDF What this handout is about Friendly Version of this pagePrint Get a PDF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/five_dp"
+                android:id="@+id/comment" />
+            <View
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="1.2dp"
+                android:background="@android:color/darker_gray"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:layout_marginRight="@dimen/five_dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

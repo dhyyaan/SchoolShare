@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="profile"
+            type="com.think360.schoolshare.model.ProfileModel" />
+    </data>
+<LinearLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/permanentInfo"
+    android:layout_marginLeft="@dimen/five_dp"
+    android:layout_marginRight="@dimen/five_dp"
+    android:background="#EBEBEB"
+    android:visibility="gone">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty_dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center">
+        <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_permanent_add"
+            android:id="@+id/tvTitle"
+            android:textColor="@color/color1"
+            android:textSize="@dimen/twenty_sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/five_dp"
+            android:layout_marginLeft="@dimen/five_dp"
+            />
+
+    </LinearLayout>
+
+    <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_permanent_add"
+        android:id="@+id/tvLvlCurrentAdd"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginLeft="@dimen/five_dp"
+
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/fifteen_sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/etCurrentAdd"
+        android:gravity="left"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginLeft="@dimen/five_dp"
+        android:layout_marginRight="@dimen/five_dp"
+        android:textSize="@dimen/fifteen_sp"
+        android:text="@{profile.paddress}"
+        android:textColor="@android:color/black"
+        />
+    <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lvl_country"
+        android:id="@+id/tvLvlCountry"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginLeft="@dimen/five_dp"
+
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/twenty_sp"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerCountry"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginLeft="@dimen/five_dp"
+        android:layout_marginRight="@dimen/five_dp" />
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1.2dp"
+        android:background="@android:color/black"
+        android:layout_centerVertical="true"
+
+
+        android:layout_marginLeft="@dimen/five_dp"
+        android:layout_marginRight="@dimen/five_dp"/>
+    <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lvl_state"
+        android:id="@+id/tvLvlState"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginLeft="@dimen/five_dp"
+
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/fifteen_sp"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerState"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginLeft="@dimen/five_dp"
+        android:layout_marginRight="@dimen/five_dp" />
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1.2dp"
+        android:background="@android:color/black"
+        android:layout_centerVertical="true"
+
+
+        android:layout_marginLeft="@dimen/five_dp"
+        android:layout_marginRight="@dimen/five_dp"/>
+    <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lvl_city"
+        android:id="@+id/tvLvlCity"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginLeft="@dimen/five_dp"
+
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/fifteen_sp"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerCity"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginLeft="@dimen/five_dp"
+        android:layout_marginRight="@dimen/five_dp" />
+    <View
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="1.2dp"
+        android:background="@android:color/black"
+        android:layout_centerVertical="true"
+
+
+        android:layout_marginLeft="@dimen/five_dp"
+        android:layout_marginRight="@dimen/five_dp"/>
+    <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lvl_postal_code"
+        android:id="@+id/tvLvlPostalCode"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginLeft="@dimen/five_dp"
+
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/fifteen_sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/etPostalCode"
+        android:gravity="left"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginLeft="@dimen/five_dp"
+        android:layout_marginRight="@dimen/five_dp"
+        android:textSize="@dimen/fifteen_sp"
+        android:text="@{profile.ppostal_code}"
+        android:textColor="@android:color/black" />
+    <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lvl_mobile_no"
+        android:id="@+id/tvLvlMobileNo"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginLeft="@dimen/five_dp"
+
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/fifteen_sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/etMobile"
+        android:gravity="left"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginLeft="@dimen/five_dp"
+        android:layout_marginRight="@dimen/five_dp"
+        android:textSize="@dimen/fifteen_sp"
+        android:textColor="@android:color/black"
+        android:text="@{profile.pmobile}" />
+    <com.think360.schoolshare.surinder.utils.font.CenturyGothicRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lvl_phone_no"
+        android:id="@+id/tvLvlPhoneNo"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginLeft="@dimen/five_dp"
+
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/fifteen_sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/etPhoneNo"
+        android:gravity="left"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginLeft="@dimen/five_dp"
+        android:layout_marginRight="@dimen/five_dp"
+        android:textSize="@dimen/fifteen_sp"
+        android:text="@{profile.pphone_no}"
+        android:textColor="@android:color/black"
+        />
+
+
+
+</LinearLayout>
+
+</layout>
